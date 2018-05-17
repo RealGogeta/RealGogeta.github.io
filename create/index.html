@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Sentences</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+  <body>
+    <button id="hack">
+      Change!!!
+    </button>
+        <p id="out">,</p>
+        
+         <script>
+
+let sentences = [ "This is the story of a young child named _n_. They had a pet _a_. They went on adventures to _p_. They had fun and went back home.",];
+let names = ["Timmy", "Johnny", "Amy","Kelly"];
+let animal = ["Dragon","Bunny","Owl","Cat"];
+let place = ["The Himilayas","Bolivia","high school proms","the Bermuda Triangle"];
+let nameCount = 0;
+let animalCount = 0;
+let placeCount = 0;
+$("#hack").click(function(){
+let s0 = sentences[0];
+
+
+  while (s0.indexOf("_") !== -1)
+{
+    let nIndex = s0.indexOf("_n_");
+    if (nIndex !== -1)
+    {
+     s0 = replace(s0, names[Math.floor(Math.random()*4)], nIndex);
+     nameCount = nameCount + 1;
+    }
+    let aIndex = s0.indexOf("_a_");
+     if (aIndex !== -1)
+     {
+      s0 = replace(s0, animal[Math.floor(Math.random()*4)], aIndex);
+       animalCount = animalCount + 1;
+     }
+     let pIndex = s0.indexOf("_p_");
+     if (pIndex !== -1)
+     {
+      s0 = replace(s0, place[Math.floor(Math.random()*4)], pIndex);
+      placeCount = placeCount + 1;
+     }
+         
+        $("#out").html(s0);
+      
+        
+        function replace(str, replacement, index)
+        {
+            let before = str.slice(0, index);
+            let after = str.slice(index + 3);
+            let full = before + replacement + after;
+            return full;
+                }
+            }
+  }); 
+  
+  </script>
+  </body>
+</html>

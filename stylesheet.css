@@ -1,0 +1,27 @@
+body{
+    margin: 0 auto;
+    width: 720px;
+}
+
+.content{
+    border: solid black 2px;
+}
+.nav-item{
+    text-decoration:none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 4px;
+}
+.page{
+   text-align: center;
+}
+h1{
+    display:flex;
+    justify-content:center;
+    text-decoration: underline;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h2{
+    font-weight: bold;
+    text-align: center;
+    
+}
