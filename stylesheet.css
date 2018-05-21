@@ -43,3 +43,13 @@ img{
     text-align:center; 
     padding-left: 190px;
 }
+.omega{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 190px;
+}
+h3{
+    text-align: center;
+    text-decoration: underline; 
+}
