@@ -1,6 +1,7 @@
 body{
     margin: 0 auto;
     width: 720px;
+    background-color: #ae5dc6;
 }
 
 .content{
@@ -36,7 +37,6 @@ li{
 }
 img{
     width: 360px;
-}
-.college{
-    text-align: center;
+    text-align:center; 
+    padding-left: 190px;
 }

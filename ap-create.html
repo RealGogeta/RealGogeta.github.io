@@ -18,7 +18,61 @@
                    <a class="nav-item" href="research-paper.html">Research Paper</a>
                    <a class="nav-item" href="strength.html">Strengths</a>
             </div>
-            <p></p>
+            <p>2C)
+                
+                 while (s0.indexOf("_") !== -1) {
+    let nIndex = s0.indexOf("_n_");
+    if (nIndex !== -1) {
+        s0 = replace(s0, names[Math.floor(Math.random() * 4)], nIndex);
+        nameCount = nameCount + 1;
+    }
+    let aIndex = s0.indexOf("_a_");
+    if (aIndex !== -1) {
+        s0 = replace(s0, animal[Math.floor(Math.random() * 4)], aIndex);
+        animalCount = animalCount + 1;
+    }
+    let pIndex = s0.indexOf("_p_");
+    if (pIndex !== -1) {
+        s0 = replace(s0, place[Math.floor(Math.random() * 4)], pIndex);
+        placeCount = placeCount + 1;
+    }
+</p>
+
+<p>The purpose of this while loop is to write one name, animal and place that are selected from the names, animal and place array into the sentences that come from the sentence array.When the while loop runs correctly, it writes the strings from the names ,animal and places array and the selected string are chosen randomly using the Math.random code and implements the strings into the sentences. The while loop is able to achieve this result by creating sentences and select random strings each time. If this program did not include this while loop, it would not select the strings from the arrays that are needed to write the words into the sentences. This while loop works with the function replace and with the indexof method to show the sentences created on the HTML.</p>
+
+<p>function replace(str, replacement, index) {
+      let before = str.slice(0, index);
+      let after = str.slice(index + 3);
+      let full = before + replacement + after;
+      return full;
+  }
+
+ </p>
+ 
+ <p>The Subalgorithm Function replace replaces the _n_, _a_ and _p_ tokens with the strings from the names, animal and place array  by calling full. Full has the variables Before, After, and  Replacement. The variable Before holds the string chunk before the _n_, _p_ and _a_ tokens. The variable After holds the string chunk after the _n_, _a_ and _p_ tokens. The variable Replacement replaces the _n_, _a_ and _p_ tokens with a string from the names, place and animal array. When the function replace calls full, it performs the Before variable first then the Replacement variable and finally the After variable to replace _n_ ,_a_ and _p_ tokens with a string inside the names, animal and place array.</p>
+ 
+ <p>let nIndex = s0.indexOf("_n_");
+  if (nIndex !== -1) {
+      s0 = replace(s0, names[Math.floor(Math.random() * 4)], nIndex);
+      nameCount = nameCount + 1;
+  }
+
+ </p>
+ 
+ <p>The Sub algorithm indexOf checks to see if there's a _n_ token in the sentences array and then it will perform the if statement. It calls the function replace so it can replace each _n_ token with a string in the names array.</p>
+ 
+<p>
+    2d)
+    
+    function replace(str, replacement, index) {
+      let before = str.slice(0, index);
+      let after = str.slice(index + 3);
+      let full = before + replacement + after;
+      return full;
+  }
+</p>
+
+<p>An example of an abstraction in my program is function replace.This simplifies my program by condensing the code to a function to replace each _n_, _a_ and _p_ token with a string in the names, animal and place array. I created this abstraction, function replace, to solve the issue of not having the _n_, _p_ and _a_ token being replaced by the strings inside the names, animal and place array. If this abstraction wasn't present, then the sentences wouldn't be completed and _n_, _a_ and _p_ token wouldn't be replaced by the strings in the names, animal and place array.</p>
              <iframe src="create/index.html" width="500" height="500"/>
         </div>    
     </body>
